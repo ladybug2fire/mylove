@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="./source/css/main.css">
+  <title>我的宝贝我的爱</title>
+</head>
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: lovely;
+  }
+  
+  #app {
+    text-align: center;
+    font-size: xx-large;
+    color: powderblue;
+    text-shadow: 5px 5px 50px skyblue;
+  }
+</style>
+
+<body>
+  <div id="app">
+    亲爱的宝贝，我们在一起{{days}}天了
+  </div>
+
+</body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script type="text/javascript">
+  //0123456789
+  var app = new Vue({
+    el: '#app',
+    computed: {
+      days: function () {
+        var first_day = new Date('2017-05-04');
+        var days = (new Date() - first_day) / 1000 / 24 / 60 / 60;
+        return parseInt(days + 1)
+      }
+    }
+  });
+
+</script>
+
+</html>
