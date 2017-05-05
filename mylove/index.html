@@ -42,7 +42,7 @@
     el: '#app',
     computed: {
       days: function () {
-        var first_day = new Date('2017-05-04');
+        var first_day = new Date('2017/05/04 00:00:00');
         var days = (new Date() - first_day) / 1000 / 24 / 60 / 60;
         return parseInt(days + 1)
       }
